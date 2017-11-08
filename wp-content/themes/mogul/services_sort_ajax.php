@@ -18,9 +18,8 @@ $args = array('post_type' => 'services_gallery',
 		 $loop = new WP_Query($args);
 		 if($loop->have_posts()) {
 			while($loop->have_posts()) : $loop->the_post();
-				echo (get_post_meta( get_the_ID()  , 'service_name', true));
-				echo (get_post_meta( get_the_ID()  , 'service_price', true));
-				echo (get_post_meta( get_the_ID()  , 'service_description', true) . '<br>');
+				echo ("<div class='service_element col-sm-6 col-md-6 col-lg-6'><div class='name'>".get_post_meta( get_the_ID()  , 'service_name', true)."</div><div class='price'>".get_post_meta( get_the_ID()  , 'service_price', true)
+				."</div><div class='text'>".get_post_meta( get_the_ID()  , 'service_description', true) . '</div></div>');
 			endwhile;
 		 }
 ?>

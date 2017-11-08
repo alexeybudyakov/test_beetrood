@@ -13,6 +13,15 @@
 		<div class="menu">
 			<div class="container">
 				<div class="row">
+					<div class="col-12 mobile_menu" onclick="show_hide_menu()">
+						<div class="line"></div>
+						<div class="line"></div>
+						<div class="line"></div>
+					</div>
+					<div class="left_menu_mobile">
+						<?php wp_nav_menu(array('menu' => 'top-menu', 'menu_class' => 'top-menu')); ?>
+					</div>
+					
 					<?php wp_nav_menu(array('menu' => 'top-menu', 'menu_class' => 'top-menu')); ?>
 				</div>
 			</div>
@@ -26,7 +35,7 @@
 		<div class="header"  style="background:url(<?php echo $imageURI ;?>) center center no-repeat; background-size: 100% 100%; ">
 			<form action="<?php echo get_site_url(); ?>/contact" method="post">
 			<input type="hidden" name="type" value="appointment">
-			<button type='submit' style='width:0'>
+			<button type='submit' >
 			<?php 
 				$image = get_post_meta( url_to_postid('header/header') , 'appointment_button', true); 						
 						if( $image ) {
@@ -43,3 +52,8 @@
 			?>
 		</div>
 	</header>
+	<script>
+	function show_hide_menu(){
+			$("body").toggleClass('show_left_menu');
+		}
+	</script>

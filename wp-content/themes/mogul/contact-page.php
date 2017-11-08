@@ -33,15 +33,20 @@ if (isset($_POST['added'])){
 }
 switch($_POST['type']){
 	case 'contact':
-		the_title(); 
+		echo("<h1>".get_the_title()."</h1>"); 
+		$image = get_post_meta( url_to_postid('header/header') , 'submit_button', true); 						
+						if( $image ) {
+							$text1.=wp_get_attachment_image( $image, 'full',"", ["class" => "button"]);
+						}
 		$text = '<form action="'.get_site_url().'/contact" method="post">'.
 			'<input type="hidden" name="added" value="true">'.
 			'<input type="hidden" name="type" value="contact">'.
 			'<label>Name <input required name="user_name"></label>'.
 			'<label>E-mail <input required type="email" name="email"></label>'.
 			'<label>Phone Number <input required  name="phone"></label>'.
-			'<label>Inqury <textarea required name="text"></textarea></label>'.
-			'<button type="submit">Submit</button>'.
+			'<label>Inqury <textarea required name="text"></textarea>
+			<div class="line"></div></label>'.
+			'<button type="submit">'.$text1.'</button>'.
 			'</form>';
 		echo($text);
 		$text2='<form action="'.get_site_url().'/contact" method="post">
@@ -56,7 +61,7 @@ switch($_POST['type']){
 		$text3='<form action="'.get_site_url().'/contact" method="post">
 			<input type="hidden" name="type" value="review">
 			<button type="submit">';
-				$image = get_post_meta( url_to_postid('header/header') , 'appointment_button', true); 						
+				$image = get_post_meta( url_to_postid('header/header') , 'review_button', true); 						
 						if( $image ) {
 							$text3.=wp_get_attachment_image( $image, 'full',"", ["class" => "button"]);
 						}
@@ -64,28 +69,36 @@ switch($_POST['type']){
 			echo($text3);
 	break;
 	case 'appointment':
-		echo('Book Your Appointment');	
+		echo("<h1>".'Book Your Appointment'."</h1>");
+		$image = get_post_meta( url_to_postid('header/header') , 'submit_button', true); 						
+						if( $image ) {
+							$text1.=wp_get_attachment_image( $image, 'full',"", ["class" => "button"]);
+						}		
 		$text = '<form action="'.get_site_url().'/contact" method="post">'.
 			'<input type="hidden" name="added" value="true">'.
 			'<input type="hidden" name="type" value="appointment">'.
 			'<label>Name <input required name="user_name"></label>'.
 			'<label>E-mail <input required type="email" name="email"></label>'.
 			'<label>Phone Number <input required  name="phone"></label>'.
-			'<label>Inqury <textarea required name="text"></textarea></label>'.
-			'<button type="submit">Submit</button>'.
+			'<label>Inqury <textarea required name="text"></textarea><div class="line"></div></label>'.
+			'<button type="submit">'.$text1.'</button>'.
 			'</form>';
 		echo($text);
 	break;
 	case 'review':
-		echo('Leave a Review');	
+		echo("<h1>".'Leave a Review'."</h1>");	
+		$image = get_post_meta( url_to_postid('header/header') , 'submit_button', true); 						
+						if( $image ) {
+							$text1.=wp_get_attachment_image( $image, 'full',"", ["class" => "button"]);
+						}
 		$text = '<form action="'.get_site_url().'/contact" method="post">'.
 			'<input type="hidden" name="added" value="true">'.
 			'<input type="hidden" name="type" value="review">'.
 			'<label>Name <input required name="user_name"></label>'.
 			'<label>E-mail <input required type="email" name="email"></label>'.
 			'<label>Phone Number <input required  name="phone"></label>'.
-			'<label>Inqury <textarea required name="text"></textarea></label>'.
-			'<button type="submit">Submit</button>'.
+			'<label>Inqury <textarea required name="text"></textarea><div class="line"></div></label>'.
+			'<button type="submit">'.$text1.'</button>'.
 			'</form>';
 		echo($text);
 	break;	
