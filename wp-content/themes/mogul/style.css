@@ -941,12 +941,12 @@ footer .foot_element.right{
 	}
 	#blog .left_content{
 		width:100%;
-		margin: 0 auto;
+		margin : 90px auto 0px;
 		padding: 0;
 	}
 	#blog .right_content{
 		width:100%;
-		margin: 0 auto;
+		margin : 90px auto 0px;
 		padding: 0;
 	}
 	#blog .right_content li{
@@ -990,7 +990,12 @@ footer .foot_element.right{
 		max-width: 100%;
 		height: auto;
 	}
-	
+	#data {    
+		margin-top: 30px;
+		top: 0;
+		position: absolute;
+		margin-left: 40px;
+	}
 	
 @media (min-width: 576px){
 	.left_menu_mobile{
@@ -1150,6 +1155,12 @@ footer .foot_element.right{
 		width: 120px;
 		height: auto;
 		outline: none;
+	}
+	#data {    
+		margin-top: 30px;
+		top: 0;
+		position: absolute;
+		margin-left: 100px;
 	}
 }
 
@@ -1316,6 +1327,12 @@ footer .foot_element.right{
 	}
 	#contact_page .line{
 		
+	}
+	#data {    
+		margin-top: 30px;
+		top: 0;
+		position: absolute;
+		margin-left: 200px;
 	}
 }
 @media (min-width: 992px){

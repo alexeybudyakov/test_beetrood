@@ -1,0 +1,49 @@
+2017-11-10T15:34:57+00:00 CRITICAL Uncaught Error: Call to undefined function string() in C:\xampp\htdocs\test_beetrood\wp-content\themes\mogul\get_field_tempalte.php:9
+Stack trace:
+#0 C:\xampp\htdocs\test_beetrood\wp-includes\template-loader.php(74): include()
+#1 C:\xampp\htdocs\test_beetrood\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\test_beetrood\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown
+
+2017-11-10T15:45:07+00:00 CRITICAL Uncaught Error: Call to undefined function get_post_data() in C:\xampp\htdocs\test_beetrood\wp-content\themes\mogul\get_field_tempalte.php:8
+Stack trace:
+#0 C:\xampp\htdocs\test_beetrood\wp-includes\template-loader.php(74): include()
+#1 C:\xampp\htdocs\test_beetrood\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\test_beetrood\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown
+
+2017-11-10T15:48:07+00:00 CRITICAL Uncaught Error: Call to undefined method WP_Post::the_title() in C:\xampp\htdocs\test_beetrood\wp-content\themes\mogul\get_field_tempalte.php:8
+Stack trace:
+#0 C:\xampp\htdocs\test_beetrood\wp-includes\template-loader.php(74): include()
+#1 C:\xampp\htdocs\test_beetrood\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\test_beetrood\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown
+
+2017-11-10T16:27:54+00:00 CRITICAL Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\test_beetrood\wp-content\themes\mogul\get_meta_tempalte.php:9
+Stack trace:
+#0 C:\xampp\htdocs\test_beetrood\wp-includes\template-loader.php(74): include()
+#1 C:\xampp\htdocs\test_beetrood\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\test_beetrood\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown
+
+2017-11-10T16:28:36+00:00 CRITICAL Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\test_beetrood\wp-content\themes\mogul\get_meta_tempalte.php:9
+Stack trace:
+#0 C:\xampp\htdocs\test_beetrood\wp-includes\template-loader.php(74): include()
+#1 C:\xampp\htdocs\test_beetrood\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\test_beetrood\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown
+
+2017-11-10T16:29:38+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wpdb::prepare(), 1 passed in C:\xampp\htdocs\test_beetrood\wp-content\themes\mogul\get_meta_tempalte.php on line 9 and exactly 2 expected in C:\xampp\htdocs\test_beetrood\wp-includes\wp-db.php:1292
+Stack trace:
+#0 C:\xampp\htdocs\test_beetrood\wp-content\themes\mogul\get_meta_tempalte.php(9): wpdb->prepare('SELECT meta_val...')
+#1 C:\xampp\htdocs\test_beetrood\wp-includes\template-loader.php(74): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\test_beetrood\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\test_beetrood\index.php(17): require('C:\\xampp\\htdocs...')
+#4 {main}
+  thrown
+
